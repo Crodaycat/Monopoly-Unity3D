@@ -18,5 +18,6 @@ public class PublicService : Property {
 			print ("Arreglar para que retorne con el metodo de los datos");
 			return (3 * 4);
 		}
+		return 0;
 	}
 }
