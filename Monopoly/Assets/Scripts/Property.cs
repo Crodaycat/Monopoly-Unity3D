@@ -16,7 +16,7 @@ public class Property : Square
 		return this.owner.playerName == player.playerName;
 	}
 
-	public int getRent ()
+	public int GetRent ()
 	{
 		return rent;
 	}
