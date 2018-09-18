@@ -17,5 +17,5 @@ public class PrivateProperty : Property
 	}
 
 	public Neighborhood neighborhood;
-	public 
+	public List<Building> buildings;
 }

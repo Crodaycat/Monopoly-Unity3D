@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PublicService : Property {
 
-	public override int GetRent (Player player)
+	public int GetRent (Player player)
 	{
 		if (this.IsOwner(player))
 		{

@@ -9,12 +9,4 @@ public class GameController : MonoBehaviour {
 	public PublicService water;
 	public PublicService electricity;
 
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
