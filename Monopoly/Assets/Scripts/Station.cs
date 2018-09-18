@@ -30,5 +30,6 @@ public class Station : Property
                     break;
             }
         }
+        return 0;
     }
 }
