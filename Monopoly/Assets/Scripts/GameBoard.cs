@@ -5,5 +5,5 @@ using UnityEngine;
 public class GameBoard : MonoBehaviour 
 {
 	public static GameBoard singleton;
-	public Square[] square;
+	public List<Square> square;
 }

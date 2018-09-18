@@ -16,6 +16,13 @@ public class PrivateProperty : Property
 		Naranja
 	}
 
+	public int rent;
 	public Neighborhood neighborhood;
 	public List<Building> buildings;
+
+	public override int GetRent (Player player)
+	{
+		print ("Desarrollar el método que calcule la renta de una propiedad privada");
+		return rent;
+	}
 }
