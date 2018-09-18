@@ -7,7 +7,6 @@ public class Property : Square
 	public string propertyName;
 	public int propertyValue;
 	public Player owner;
-	public int rent;
 	public GameCard gameCard;
 	public int mortgage; // Lo que el banco te paga por hipotecar la propiedad
 
@@ -16,8 +15,8 @@ public class Property : Square
 		return this.owner.playerName == player.playerName;
 	}
 
-	public int GetRent ()
+	public virtual int GetRent (Player player)
 	{
-		return rent;
+		return 0;
 	}
 }

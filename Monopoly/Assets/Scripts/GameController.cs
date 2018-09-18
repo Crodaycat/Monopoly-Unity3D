@@ -8,6 +8,6 @@ public class GameController : MonoBehaviour {
 
 	public PublicService water;
 	public PublicService electricity;
-    public 
+    public List<Station> stations;
 
 }
