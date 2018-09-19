@@ -16,7 +16,6 @@ public class PrivateProperty : Property
 		Naranja
 	};
 
-	public int rent;
 	public Neighborhood neighborhood;
 	public List<Building> buildings;
 

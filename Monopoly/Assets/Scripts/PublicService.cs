@@ -6,7 +6,8 @@ public class PublicService : Property {
 
 	public override int GetRent (Player player)
 	{
-		if (this.IsOwner(player))
+        CommunityCard card = (CommunityCard)this.gameCard;
+        if (this.IsOwner(player))
 		{
 			return 0;
 		} else if (GameController.singleton.water.owner == GameController.singleton.electricity.owner) 

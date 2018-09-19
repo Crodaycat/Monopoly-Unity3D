@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Station : Property
 {
-    public int rent;
+    
     public override int GetRent(Player player)
     {
         if (this.IsOwner(player))
@@ -32,4 +32,5 @@ public class Station : Property
         }
         return 0;
     }
+    
 }

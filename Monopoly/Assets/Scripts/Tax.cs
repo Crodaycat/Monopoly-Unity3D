@@ -30,6 +30,6 @@ public class Tax : Square {
 
 	public int GetLuxuryTax ()
 	{
-		return 75;
+		return 100;
 	}
 }
