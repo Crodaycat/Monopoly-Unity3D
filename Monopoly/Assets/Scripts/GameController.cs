@@ -9,5 +9,6 @@ public class GameController : MonoBehaviour {
 	public PublicService water;
 	public PublicService electricity;
     public List<Station> stations;
+    public List<Tax> taxes;
 
 }

@@ -14,7 +14,7 @@ public class PrivateProperty : Property
 		Celeste,
 		Magenta,
 		Naranja
-	}
+	};
 
 	public int rent;
 	public Neighborhood neighborhood;
