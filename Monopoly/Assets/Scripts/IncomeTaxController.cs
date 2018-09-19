@@ -24,7 +24,7 @@ public class IncomeTaxController : MonoBehaviour {
 		this.gameObject.SetActive (true);
 	}
 
-	public void PayTenPercet ()
+	public void PayTenPercent ()
 	{
 		chosen = true;
 		pay = false;
