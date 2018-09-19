@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Property : Square 
 {
+	public enum PropertyType
+	{
+		PrivateProperty,
+		Service,
+		Station
+	}
+
+	public PropertyType propertyType;
 	public string propertyName;
 	public int propertyValue;
 	public Player owner;
@@ -12,7 +20,10 @@ public class Property : Square
 
 	public bool IsOwner (Player player) 
 	{
-		return this.owner.playerName == player.playerName;
+		if (this.owner != null)
+			return this.owner.playerName == player.playerName;
+
+		return false;
 	}
 
 	public virtual int GetRent (Player player)

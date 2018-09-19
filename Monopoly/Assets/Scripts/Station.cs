@@ -7,7 +7,7 @@ public class Station : Property
     
     public override int GetRent(Player player)
     {
-        if (this.IsOwner(player))
+        if (IsOwner(player))
         {
             return 0;
         }

@@ -7,7 +7,7 @@ public class Square : MonoBehaviour
 	public enum SquareType 
 	{
 		Property,
-		CommunalChest,
+		CommununityChest,
 		Tax,
 		Chance,
 		Jail,
