@@ -20,6 +20,11 @@ public class Player : MonoBehaviour
 		{
 			move--;
 			square = (square + 1) % GameController.singleton.squares.Count;
+			if (square == 0 && GameController.singleton.turnCount > 1)
+			{
+				print ("Obtienes 200 por pasar por la meta.");
+				money += 200;
+			}
 			this.gameObject.transform.position = GameController.singleton.squares[square].transform.position;
 			yield return new WaitForSeconds (0.5f);
 		}

@@ -8,10 +8,9 @@ public class GameController : MonoBehaviour
 
 	public PlayerNumberController playerNumControl;
 	public CreatePlayerController createPlayerControl;
+	public GameInterfazController gameInterfazControl;
 
 	public GameObject playerPrefab;
-
-
 
 	public Square startSquare;
 
@@ -23,7 +22,7 @@ public class GameController : MonoBehaviour
     public List<Tax> taxes;
 
 	int playersNumber;
-	private int turnCount = 0;
+	public int turnCount = 0;
 
 	void Awake ()
 	{
@@ -43,6 +42,7 @@ public class GameController : MonoBehaviour
 			players.Add(CreatePlayer (createPlayerControl.playerName));
 		}
 
+		gameInterfazControl.ShowGameInterface ();
 		while (players.Count > 1)
 		{
 			turnCount++;
@@ -50,8 +50,11 @@ public class GameController : MonoBehaviour
 			{
 				if (!player.isInPrison)
 				{
-					int move = ThrowDice ();
-					move += ThrowDice ();
+					gameInterfazControl.ShowDiceThrower (player);
+					yield return new WaitUntil (() => gameInterfazControl.hasThrowDices);
+					int move = gameInterfazControl.dice1 + gameInterfazControl.dice2;
+					yield return new WaitForSeconds (2f);
+					gameInterfazControl.HideDiceThrower ();
 					StartCoroutine(player.Walk (move));
 					yield return new WaitUntil (() => !player.isMoving);
 					if (squares [player.square].squareType == Square.SquareType.Property) 
@@ -83,10 +86,5 @@ public class GameController : MonoBehaviour
 		player.playerName = name;
 		player.money = 200;
 		return player;
-	}
-
-	public int ThrowDice ()
-	{
-		return Random.Range (1, 7);
 	}
 }
