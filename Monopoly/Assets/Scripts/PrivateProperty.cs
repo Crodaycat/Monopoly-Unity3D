@@ -23,6 +23,7 @@ public class PrivateProperty : Property
 	public override int GetRent (Player player)
 	{
 		print ("Desarrollar el método que calcule la renta de una propiedad privada");
-		return rent;
+		PropertyCard card = (PropertyCard)this.gameCard;
+		return card.rent;
 	}
 }

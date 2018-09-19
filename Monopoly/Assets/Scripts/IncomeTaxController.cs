@@ -15,7 +15,7 @@ public class IncomeTaxController : MonoBehaviour {
 		if (singleton == null)
 			singleton = this;
 		else if (singleton != this)
-			DestroyImmediate (this);
+			Destroy (this);
 	}
 
 	public void ShowDialog ()
